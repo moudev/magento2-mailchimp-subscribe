@@ -4,15 +4,20 @@ email to people in the list. For example create in your store a list of clients 
 
 ## Configuration
 
-You need change the API_KEY, ID_LIST_MAILCHIMP and SERVER that MailChimp provide you. You can get more info in their [official documentation](https://mailchimp.com/es/help/about-api-keys/).
+You need change the API_KEY, ID_LIST_MAILCHIMP([Info](https://mailchimp.com/es/help/find-audience-id/)) and SERVER that MailChimp provide you. You can get more info in their [official documentation](https://mailchimp.com/es/help/about-api-keys/).
 
-- API_KEY: [Model/View/Request.php #L21](https://github.com/moudev/magento2-mailchimp-subscribe/blob/b38b24877c4ecf27a057a27196c30866922d2703/Model/View/Request.php#L21
-)
+- API_KEY: [Model/View/Request.php #L21](https://github.com/moudev/magento2-mailchimp-subscribe/blob/b38b24877c4ecf27a057a27196c30866922d2703/Model/View/Request.php#L21)
 ```php
 protected $KEY = "<KEY_MAILCHIMP>"; 
 // After - example
-protected $KEY = "459d667871186d19bd0322c35623178d-us20"; 
+protected $KEY = "459d667871186d19bd0322c35623178d-us20";
+```
 
+- ID_LIST_MAILCHIMP: [Controller/View/Add.php #L52](https://github.com/moudev/magento2-mailchimp-subscribe/blob/8ab16e16690b8246dcf4b3e87a8e5a20fbac053b/Controller/View/Add.php#L52)
+```php
+$response = $this->_requestManager->addSubscriberList(json_encode($params), '<ID_LIST_MAILCHIMP>');
+// After - example
+$response = $this->_requestManager->addSubscriberList(json_encode($params), '33fd85651a');
 ```
 
 - SERVER: [Model/View/Request.php #L27](https://github.com/moudev/magento2-mailchimp-subscribe/blob/b38b24877c4ecf27a057a27196c30866922d2703/Model/View/Request.php#L27)
