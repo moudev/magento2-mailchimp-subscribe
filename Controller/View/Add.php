@@ -49,7 +49,7 @@ class Add extends \Magento\Framework\App\Action\Action implements HttpGetActionI
         try {
             $params = $this->getRequest()->getParams();
             array_splice($params, 3);
-            $response = $this->_requestManager->addSubscriberList(json_encode($params), '33fd85651a');
+            $response = $this->_requestManager->addSubscriberList(json_encode($params), '<ID_LIST_MAILCHIMP>');
         } catch (\Exception $e) {
             $resultJson->setStatusHeader(
                 \Zend\Http\Response::STATUS_CODE_400,

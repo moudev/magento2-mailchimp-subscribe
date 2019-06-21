@@ -4,7 +4,7 @@ email to people in the list. For example create in your store a list of clients 
 
 ## Configuration
 
-You need change the API_KEY and SERVER that MailChimp provide you. You can get more info in their [official documentation](https://mailchimp.com/es/help/about-api-keys/).
+You need change the API_KEY, ID_LIST_MAILCHIMP and SERVER that MailChimp provide you. You can get more info in their [official documentation](https://mailchimp.com/es/help/about-api-keys/).
 
 - API_KEY: [Model/View/Request.php #L21](https://github.com/moudev/magento2-mailchimp-subscribe/blob/b38b24877c4ecf27a057a27196c30866922d2703/Model/View/Request.php#L21
 )
